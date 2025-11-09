@@ -17,7 +17,6 @@
             background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #bb8fce 100%);
             min-height: 100vh;
         }
-
         /* Shared Navigation */
         .nav {
             display: flex;
@@ -33,7 +32,6 @@
             right: 0;
             z-index: 1000;
         }
-
         .logo {
             font-weight: bold;
             font-size: 1.4em;
@@ -41,28 +39,23 @@
             padding: 8px 15px;
             border-radius: 8px;
         }
-
         .menu {
             display: flex;
             gap: 25px;
             list-style: none;
         }
-
         .menu li {
             cursor: pointer;
             transition: color 0.3s;
         }
-
         .menu li:hover {
             color: #e91e63;
         }
-
         .search-sign {
             display: flex;
             gap: 15px;
             align-items: center;
         }
-
         .search-sign input[type="search"] {
             padding: 8px 15px;
             border: none;
@@ -71,7 +64,6 @@
             color: #333;
             outline: none;
         }
-
         .sign-up {
             background: white;
             color: #e91e63;
@@ -81,12 +73,24 @@
             font-weight: bold;
             transition: background 0.3s;
         }
-
         .sign-up:hover {
             background: #e91e63;
             color: white;
         }
-
+        .back-btn {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+            cursor: pointer;
+            border: none;
+        }
+        .back-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
         /* Shared Content Area */
         .content-area {
             display: flex;
@@ -98,7 +102,6 @@
             position: relative;
             overflow: hidden;
         }
-
         /* Shared Container */
         .container {
             text-align: center;
@@ -111,7 +114,6 @@
             position: relative;
             z-index: 10;
         }
-
         /* Balloons for both pages */
         .balloons {
             position: absolute;
@@ -122,7 +124,6 @@
             pointer-events: none;
             z-index: 1;
         }
-
         .balloon {
             position: absolute;
             border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
@@ -130,7 +131,6 @@
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
             animation: float 6s ease-in-out infinite;
         }
-
         .balloon:nth-child(1) {
             top: 20%;
             left: 10%;
@@ -139,7 +139,6 @@
             background: linear-gradient(#bb8fce, #8e44ad);
             animation-delay: 0s;
         }
-
         .balloon:nth-child(2) {
             top: 40%;
             right: 15%;
@@ -148,7 +147,6 @@
             background: linear-gradient(#f39c12, #e67e22);
             animation-delay: 1.5s;
         }
-
         .balloon:nth-child(3) {
             top: 60%;
             left: 25%;
@@ -157,7 +155,6 @@
             background: linear-gradient(#e74c3c, #c0392b);
             animation-delay: 3s;
         }
-
         .balloon:nth-child(4) {
             top: 30%;
             right: 25%;
@@ -166,12 +163,10 @@
             background: linear-gradient(#e91e63, #ad1457);
             animation-delay: 2s;
         }
-
         @keyframes float {
             0%, 100% { transform: translateY(0px) rotate(-2deg); }
             50% { transform: translateY(-25px) rotate(2deg); }
         }
-
         /* Login Page Specific */
         #login .happy-birthday {
             font-size: 3.5em;
@@ -182,17 +177,14 @@
             z-index: 5;
             position: relative;
         }
-
         #login .login-form {
             margin-top: 30px;
         }
-
         #login .login-form h2 {
             color: #e91e63;
             margin-bottom: 25px;
             font-size: 1.8em;
         }
-
         #login .login-form input {
             width: 100%;
             padding: 15px;
@@ -203,11 +195,9 @@
             outline: none;
             transition: border-color 0.3s;
         }
-
         #login .login-form input:focus {
             border-color: #e91e63;
         }
-
         #login .login-form button {
             width: 100%;
             padding: 15px;
@@ -220,16 +210,13 @@
             margin-top: 15px;
             transition: transform 0.3s;
         }
-
         #login .login-form button:hover {
             transform: translateY(-2px);
         }
-
         /* Main Page Specific */
         #main {
             display: none;
         }
-
         #main .romantic-image {
             width: 100%;
             height: 250px;
@@ -237,32 +224,27 @@
             border-radius: 18px;
             margin-bottom: 25px;
         }
-
         #main h1 {
             color: #e91e63;
             margin-bottom: 25px;
             font-size: 2.5em;
         }
-
         #main .heart {
             font-size: 3.5em;
             color: #e91e63;
             animation: beat 1.5s infinite;
             margin-bottom: 10px;
         }
-
         @keyframes beat {
             0% { transform: scale(1); }
             50% { transform: scale(1.1); }
             100% { transform: scale(1); }
         }
-
         #main .milestone {
             font-size: 1.3em;
             margin: 15px 0;
             color: #666;
         }
-
         #main .live-counter {
             display: flex;
             justify-content: space-around;
@@ -270,50 +252,42 @@
             font-size: 1.5em;
             font-weight: bold;
         }
-
         #main .counter-unit {
             background: rgba(233, 30, 99, 0.1);
             padding: 15px;
             border-radius: 12px;
             min-width: 70px;
         }
-
         #main .counter-value {
             font-size: 2.8em;
             color: #e91e63;
             display: block;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
         }
-
         #main .counter-label {
             font-size: 0.85em;
             color: #666;
             text-transform: uppercase;
             letter-spacing: 1px;
         }
-
         #main .start-date {
             font-style: italic;
             color: #999;
             margin-top: 25px;
             font-size: 1.1em;
         }
-
         #main .audio-controls {
             margin: 30px 0;
         }
-
         #main audio {
             width: 100%;
             margin-top: 15px;
         }
-
         #main .audio-controls p {
             font-size: 0.95em;
             color: #999;
             margin-top: 10px;
         }
-
         #main #surprise-btn {
             background: linear-gradient(#e91e63, #ad1457);
             color: white;
@@ -325,24 +299,20 @@
             margin: 30px 0;
             transition: transform 0.3s;
         }
-
         #main #surprise-btn:hover {
             transform: scale(1.05);
         }
-
         #main #birthday-msg {
             color: #e91e63;
             font-size: 3em;
             margin: 25px 0;
             animation: bounce 1s infinite;
         }
-
         @keyframes bounce {
             0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
             40% { transform: translateY(-10px); }
             60% { transform: translateY(-5px); }
         }
-
         #main .lyrics-section {
             margin-top: 35px;
             text-align: left;
@@ -354,19 +324,16 @@
             max-height: 320px;
             overflow-y: auto;
         }
-
         #main .lyrics-section h3 {
             text-align: center;
             color: #e91e63;
             margin-bottom: 20px;
             font-size: 1.4em;
         }
-
         #main .lyrics-section p {
             margin-bottom: 15px;
             line-height: 1.5;
         }
-
         /* Pictures Gallery Styles */
         #pictures-gallery {
             display: none;
@@ -378,20 +345,17 @@
             background: rgba(255, 255, 255, 0.8);
             border-radius: 15px;
         }
-
         #pictures-gallery.show {
             display: block;
             opacity: 1;
             transform: translateY(0);
         }
-
         .gallery {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 15px;
             margin-top: 15px;
         }
-
         .our-pic {
             width: 100%;
             height: 250px;
@@ -402,12 +366,28 @@
             transition: opacity 1.2s ease-out, transform 1.2s cubic-bezier(0.34, 1.56, 0.64, 1);
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
-
         .our-pic.fade-in {
             opacity: 1;
             transform: translateY(0);
         }
-
+        /* Pictures Page Specific - to match old design */
+        #pictures-page {
+            display: none;
+        }
+        #pictures-page .container {
+            max-width: 800px; /* Slightly wider for gallery */
+        }
+        #pictures-page .gallery-header {
+            color: #e91e63;
+            font-size: 2.5em;
+            margin-bottom: 25px;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+        }
+        #pictures-page .gallery {
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
         /* Fireworks Styles - Shared */
         .firework-rocket {
             position: absolute;
@@ -420,7 +400,6 @@
             z-index: 1001;
             pointer-events: none;
         }
-
         @keyframes launch-rocket {
             0% {
                 height: 0;
@@ -432,7 +411,6 @@
                 transform: translateY(-200px);
             }
         }
-
         .firework-explosion {
             position: absolute;
             width: 10px;
@@ -446,7 +424,6 @@
             z-index: 1002;
             pointer-events: none;
         }
-
         .firework-explosion.heart {
             background: none;
             width: 20px;
@@ -456,7 +433,6 @@
             text-align: center;
             color: #ff69b4;
         }
-
         @keyframes explode {
             0% {
                 opacity: 1;
@@ -471,7 +447,6 @@
                 transform: translate(var(--dx), var(--dy)) scale(0);
             }
         }
-
         .firework-trail {
             position: absolute;
             width: 2px;
@@ -481,7 +456,6 @@
             pointer-events: none;
             z-index: 1001;
         }
-
         .firework-trail.heart {
             background: none;
             width: 15px;
@@ -491,7 +465,6 @@
             text-align: center;
             color: #ff69b4;
         }
-
         /* Responsive */
         @media (max-width: 768px) {
             .nav {
@@ -562,7 +535,6 @@
             </div>
         </div>
     </div>
-
     <!-- Main Page -->
     <div id="main">
         <nav class="nav">
@@ -609,7 +581,7 @@
                     </div>
                 </div>
                 <div class="start-date">Started on: October 5, 2025</div>
-                
+               
                 <div class="audio-controls">
                     <audio controls autoplay loop muted>
                         <source src="https://store.ceenaija.com/wp-content/uploads/music/2025/04/Alex_Warren_-_Ordinary_CeeNaija.com_.mp3" type="audio/mpeg">
@@ -617,33 +589,19 @@
                     </audio>
                     <p>Our song: "Ordinary" by Alex Warren (starts automatically muted—unmute for the full vibe! 🎶)</p>
                 </div>
-
                 <button id="surprise-btn">Click for a Surprise! 🎁</button>
-
-                <div id="pictures-gallery">
-                    <h3 style="color: #e91e63; margin-bottom: 15px;">Our Love Pictures 💕</h3>
-                    <div class="gallery">
-                        <img class="our-pic" src="./0b1310a2-5642-4a67-9c93-e5fdaccdc65f.jfif" alt="Our Love Picture 1">
-                        <img class="our-pic" src="./0c67fa2f-5385-49ce-a13a-a33b2f6f3755.jfif" alt="Our Love Picture 2">
-                        <img class="our-pic" src="./52f7b5b2-84af-4506-9037-3d18f3f60b04.jfif" alt="Our Love Picture 3">
-                        <img class="our-pic" src="./91b67145-d5c7-4506-a628-8c6d8eb63c40.jfif" alt="Our Love Picture 4">
-                        <img class="our-pic" src="./98459012-4b0b-477f-ae9d-df79fa486f7f.jfif" alt="Our Love Picture 5">
-                        <img class="our-pic" src="./a21f07f9-d464-443f-ba95-b0d3c2a010fb.jfif" alt="Our Love Picture 6">
-                        <img class="our-pic" src="./e30dcbde-add1-4b3e-8dc3-465913862edc.jfif" alt="Our Love Picture 7">
-                    </div>
-                </div>
-                
+               
                 <div class="lyrics-section">
                     <h3>Lyrics: Ordinary by Alex Warren</h3>
                     <p><strong>VERSE 1</strong><br>
                     They say the holy waters watered down and this town's lost it faith<br>
                     Our colors will fade Eventually<br>
                     So if our time is running out day after day we’ll make the mundane our masterpiece</p>
-                    
+                   
                     <p><strong>PRE</strong><br>
                     Oh my my Oh my my<br>
                     Love I take one look at you</p>
-                    
+                   
                     <p><strong>CHORUS</strong><br>
                     Taking me out of<br>
                     Of the ordinary I want you laying me down<br>
@@ -654,7 +612,7 @@
                     me kissing the ground of your sanctuary shatter me with your touch<br>
                     Oh lord return me to dust the<br>
                     Angels up in the clouds are jealous knowing we found</p>
-                    
+                   
                     <p><strong>VERSE 2</strong><br>
                     Hopeless hallelujah<br>
                     Oh this side of heaven’s gates<br>
@@ -663,7 +621,7 @@
                     At your alter I will pray<br>
                     You’re the sculptor I’m the clay<br>
                     Oh my my</p>
-                    
+                   
                     <p><strong>CHORUS</strong><br>
                     You’re taking me out<br>
                     Of the ordinary I want you laying me down<br>
@@ -676,13 +634,13 @@
                     Oh lord return me to dust<br>
                     The Angels up in the clouds<br>
                     Are jealous knowing we found</p>
-                    
+                   
                     <p><strong>BRIDGE</strong><br>
                     Something so heavenly<br>
                     Higher than ecstasy whenever your next to me<br>
                     Oh my my world was in black and white until I saw your light)<br>
                     I thought you had to die to find something so out</p>
-                    
+                   
                     <p><strong>CHORUS</strong><br>
                     Of the ordinary I want you laying me down<br>
                     Til we’re dead and buried<br>
@@ -697,7 +655,43 @@
             </div>
         </div>
     </div>
-
+    <!-- Pictures Gallery Page - Added as separate page, keeping old design elements -->
+    <div id="pictures-page">
+        <nav class="nav">
+            <button class="back-btn" onclick="goToMain()">Back to Memories</button>
+            <div class="logo">Bella</div>
+            <ul class="menu">
+                <li onclick="goToLogin()">Home</li>
+                <li>Network</li>
+                <li>Contacts</li>
+                <li>Club</li>
+            </ul>
+            <div class="search-sign">
+                <input type="search" placeholder="Search...">
+                <a href="#" class="sign-up">SIGN UP</a>
+            </div>
+        </nav>
+        <div class="content-area">
+            <div class="balloons">
+                <div class="balloon"></div>
+                <div class="balloon"></div>
+                <div class="balloon"></div>
+                <div class="balloon"></div>
+            </div>
+            <div class="container">
+                <h1 class="gallery-header">Our Love Pictures 💕</h1>
+                <div class="gallery" id="pictures-gallery-on-page">
+                    <img class="our-pic" src="./0b1310a2-5642-4a67-9c93-e5fdaccdc65f.jfif" alt="Our Love Picture 1">
+                    <img class="our-pic" src="./0c67fa2f-5385-49ce-a13a-a33b2f6f3755.jfif" alt="Our Love Picture 2">
+                    <img class="our-pic" src="./52f7b5b2-84af-4506-9037-3d18f3f60b04.jfif" alt="Our Love Picture 3">
+                    <img class="our-pic" src="./91b67145-d5c7-4506-a628-8c6d8eb63c40.jfif" alt="Our Love Picture 4">
+                    <img class="our-pic" src="./98459012-4b0b-477f-ae9d-df79fa486f7f.jfif" alt="Our Love Picture 5">
+                    <img class="our-pic" src="./a21f07f9-d464-443f-ba95-b0d3c2a010fb.jfif" alt="Our Love Picture 6">
+                    <img class="our-pic" src="./e30dcbde-add1-4b3e-8dc3-465913862edc.jfif" alt="Our Love Picture 7">
+                </div>
+            </div>
+        </div>
+    </div>
     <script>
         // Login functionality
         function login() {
@@ -712,63 +706,67 @@
                 document.getElementById('password').value = '';
             }
         }
-
         // Go back to login
         function goToLogin() {
             document.getElementById('main').style.display = 'none';
+            document.getElementById('pictures-page').style.display = 'none';
             document.getElementById('login').style.display = 'block';
             document.getElementById('username').value = '';
             document.getElementById('password').value = '';
         }
-
+        // Go back to main
+        function goToMain() {
+            document.getElementById('pictures-page').style.display = 'none';
+            document.getElementById('main').style.display = 'block';
+        }
         // Enter key support for login
         document.addEventListener('keypress', function(e) {
             if (e.key === 'Enter') {
                 login();
             }
         });
-
-        // Search functionality for "our love"
+        // Search functionality for "our love" - go to pictures page
         document.addEventListener('DOMContentLoaded', function() {
             const mainSearch = document.getElementById('main-search');
             if (mainSearch) {
                 mainSearch.addEventListener('input', function() {
                     if (this.value.toLowerCase().includes('our love')) {
-                        showPictures();
+                        goToPicturesPage();
                         this.value = ''; // Optional: clear search after showing
                     }
                 });
             }
         });
-
-        function showPictures() {
-            const gallery = document.getElementById('pictures-gallery');
-            gallery.classList.add('show');
-            const pics = gallery.querySelectorAll('.our-pic');
-            pics.forEach((pic, index) => {
-                setTimeout(() => {
-                    pic.classList.add('fade-in');
-                }, 200 + index * 250); // Adjusted for smoother staggered reveal: shorter initial delay and stagger for fluid one-by-one appearance
-            });
+        function goToPicturesPage() {
+            document.getElementById('main').style.display = 'none';
+            document.getElementById('pictures-page').style.display = 'block';
+            // Trigger smooth one-by-one animation
+            setTimeout(() => {
+                const pics = document.querySelectorAll('#pictures-page .our-pic');
+                pics.forEach((pic, index) => {
+                    setTimeout(() => {
+                        pic.classList.add('fade-in');
+                    }, 200 + index * 250); // Staggered reveal for one-by-one effect
+                });
+            }, 100); // Short delay for transition feel
         }
-
         // Main content scripts
         const startDate = new Date('2025-10-05T00:00:00');
-        
+       
         function calculateElapsed() {
             const now = new Date();
             const elapsed = now - startDate;
-            
+           
             const totalDays = Math.floor(elapsed / (1000 * 60 * 60 * 24)) + 1;
             const days = totalDays;
             const remainingMs = elapsed % (1000 * 60 * 60 * 24);
             const hours = Math.floor(remainingMs / (1000 * 60 * 60));
             const minutes = Math.floor((remainingMs % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((remainingMs % (1000 * 60)) / 1000);
-            
+           
             return { days, hours, minutes, seconds };
         }
-        
+       
         function updateCounters() {
             const { days, hours, minutes, seconds } = calculateElapsed();
             document.getElementById('days').textContent = days;
@@ -776,14 +774,12 @@
             document.getElementById('minutes').textContent = minutes;
             document.getElementById('seconds').textContent = seconds;
         }
-        
+       
         updateCounters();
         setInterval(updateCounters, 1000);
-
         // Fireworks
         let fireworksActive = false;
         const surpriseBtn = document.getElementById('surprise-btn');
-
         surpriseBtn.addEventListener('click', () => {
             if (fireworksActive) return;
             fireworksActive = true;
@@ -793,16 +789,14 @@
             msg.textContent = 'Happy Birthday! 🎉';
             const container = document.querySelector('#main .container');
             container.insertBefore(msg, document.querySelector('#main .lyrics-section'));
-            
+           
             setTimeout(() => {
                 startFullFireworksShow();
             }, 1000);
         });
-
         function startFullFireworksShow() {
             let totalBursts = 0;
             const maxBursts = 60;
-
             const phase1 = setInterval(() => {
                 launchFirework();
                 totalBursts++;
@@ -819,7 +813,6 @@
                 }
             }, 500);
         }
-
         function launchFirework() {
             const hue = Math.random() * 360;
             const startX = Math.random() * window.innerWidth;
@@ -828,13 +821,11 @@
             rocket.style.setProperty('--hue', hue);
             rocket.style.setProperty('--start-x', `${startX}px`);
             document.body.appendChild(rocket);
-
             for (let i = 0; i < 5; i++) {
                 setTimeout(() => {
                     createTrailParticle(startX, window.innerHeight, hue);
                 }, i * 100);
             }
-
             setTimeout(() => {
                 const explosionX = startX;
                 const explosionY = window.innerHeight * 0.3 + Math.random() * 200;
@@ -842,7 +833,6 @@
                 rocket.remove();
             }, 800);
         }
-
         function createExplosion(x, y, hue, numParticles) {
             for (let i = 0; i < numParticles; i++) {
                 const particle = document.createElement('div');
@@ -850,25 +840,20 @@
                 particle.style.left = `${x}px`;
                 particle.style.top = `${y}px`;
                 particle.style.setProperty('--hue', hue);
-
                 const angle = (i / numParticles) * Math.PI * 2;
                 const velocity = 150 + Math.random() * 100;
                 const dx = Math.cos(angle) * velocity;
                 const dy = Math.sin(angle) * velocity - 50;
                 particle.style.setProperty('--dx', `${dx}px`);
                 particle.style.setProperty('--dy', `${dy}px`);
-
                 if (Math.random() < 0.2) {
                     particle.classList.add('heart');
                     particle.innerHTML = '❤️';
                 }
-
                 document.body.appendChild(particle);
-
                 setTimeout(() => particle.remove(), 1000);
             }
         }
-
         function createTrailParticle(x, y, hue) {
             const particle = document.createElement('div');
             particle.className = 'firework-trail';
@@ -876,12 +861,10 @@
             particle.style.top = `${y}px`;
             particle.style.setProperty('--hue', hue);
             document.body.appendChild(particle);
-
             if (Math.random() < 0.2) {
                 particle.classList.add('heart');
                 particle.innerHTML = '❤️';
             }
-
             let posY = y;
             const speed = 10 + Math.random() * 5;
             const anim = setInterval(() => {
@@ -897,4 +880,3 @@
     </script>
 </body>
 </html>
-
