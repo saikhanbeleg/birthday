@@ -109,7 +109,7 @@
             padding: 50px 40px;
             border-radius: 25px;
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-            max-width: 600px;
+            max-width: 700px;
             width: 100%;
             position: relative;
             z-index: 10;
@@ -313,6 +313,38 @@
             40% { transform: translateY(-10px); }
             60% { transform: translateY(-5px); }
         }
+        /* Letters Section */
+        .letters-section {
+            margin: 40px 0;
+            text-align: left;
+        }
+        .letter-card {
+            background: rgba(233, 30, 99, 0.05);
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        .letter-card h3 {
+            text-align: center;
+            color: #e91e63;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+        }
+        .letter-card p {
+            line-height: 1.8;
+            color: #444;
+            white-space: pre-line;
+            font-size: 1.1em;
+        }
+        .letter-card .signature {
+            text-align: right;
+            font-style: italic;
+            color: #e91e63;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        /* Lyrics Section */
         #main .lyrics-section {
             margin-top: 35px;
             text-align: left;
@@ -370,12 +402,12 @@
             opacity: 1;
             transform: translateY(0);
         }
-        /* Pictures Page Specific - to match old design */
+        /* Pictures Page Specific */
         #pictures-page {
             display: none;
         }
         #pictures-page .container {
-            max-width: 800px; /* Slightly wider for gallery */
+            max-width: 800px;
         }
         #pictures-page .gallery-header {
             color: #e91e63;
@@ -383,12 +415,7 @@
             margin-bottom: 25px;
             text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
         }
-        #pictures-page .gallery {
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-            margin-top: 15px;
-        }
-        /* Fireworks Styles - Shared */
+        /* Fireworks Styles */
         .firework-rocket {
             position: absolute;
             bottom: 0;
@@ -401,15 +428,8 @@
             pointer-events: none;
         }
         @keyframes launch-rocket {
-            0% {
-                height: 0;
-                opacity: 1;
-            }
-            100% {
-                height: 300px;
-                opacity: 0;
-                transform: translateY(-200px);
-            }
+            0% { height: 0; opacity: 1; }
+            100% { height: 300px; opacity: 0; transform: translateY(-200px); }
         }
         .firework-explosion {
             position: absolute;
@@ -434,18 +454,9 @@
             color: #ff69b4;
         }
         @keyframes explode {
-            0% {
-                opacity: 1;
-                transform: translate(-50%, -50%) scale(0);
-            }
-            50% {
-                opacity: 1;
-                transform: translate(-50%, -50%) scale(1);
-            }
-            100% {
-                opacity: 0;
-                transform: translate(var(--dx), var(--dy)) scale(0);
-            }
+            0% { opacity: 1; transform: translate(-50%, -50%) scale(0); }
+            50% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+            100% { opacity: 0; transform: translate(var(--dx), var(--dy)) scale(0); }
         }
         .firework-trail {
             position: absolute;
@@ -467,37 +478,16 @@
         }
         /* Responsive */
         @media (max-width: 768px) {
-            .nav {
-                padding: 10px 20px;
-                flex-wrap: wrap;
-            }
-            .menu {
-                gap: 15px;
-                font-size: 0.9em;
-            }
-            .content-area {
-                padding: 120px 15px 30px;
-            }
-            .container {
-                padding: 30px 20px;
-            }
-            #login .happy-birthday {
-                font-size: 2.5em;
-            }
-            #main .live-counter {
-                flex-wrap: wrap;
-                gap: 10px;
-            }
-            #main .counter-unit {
-                min-width: auto;
-            }
-            .gallery {
-                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-                gap: 10px;
-            }
-            .our-pic {
-                height: 200px;
-            }
+            .nav { padding: 10px 20px; flex-wrap: wrap; }
+            .menu { gap: 15px; font-size: 0.9em; }
+            .content-area { padding: 120px 15px 30px; }
+            .container { padding: 30px 20px; }
+            #login .happy-birthday { font-size: 2.5em; }
+            #main .live-counter { flex-wrap: wrap; gap: 10px; }
+            #main .counter-unit { min-width: auto; }
+            .gallery { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; }
+            .our-pic { height: 200px; }
+            .letter-card h3 { font-size: 1.5em; }
         }
     </style>
 </head>
@@ -535,6 +525,7 @@
             </div>
         </div>
     </div>
+
     <!-- Main Page -->
     <div id="main">
         <nav class="nav">
@@ -581,7 +572,7 @@
                     </div>
                 </div>
                 <div class="start-date">Started on: October 5, 2025</div>
-               
+
                 <div class="audio-controls">
                     <audio controls autoplay loop muted>
                         <source src="https://store.ceenaija.com/wp-content/uploads/music/2025/04/Alex_Warren_-_Ordinary_CeeNaija.com_.mp3" type="audio/mpeg">
@@ -589,19 +580,64 @@
                     </audio>
                     <p>Our song: "Ordinary" by Alex Warren (starts automatically muted—unmute for the full vibe! 🎶)</p>
                 </div>
+
                 <button id="surprise-btn">Click for a Surprise! 🎁</button>
-               
+
+                <!-- Letters from the Heart -->
+                <div class="letters-section">
+                    <div class="letter-card">
+                        <h3>Шинэ жилийн мэнд, миний хайртаи 💌</h3>
+                        <p>Шинэ жилийн мэнд, миний хамгийн хөөрхөн хүн
+Он солигдож, шинэ жил эхэлж байхад чиний оршихуй миний энэ жилийг аль хэдийн гоё болгочихсон юм шиг санагддаг.
+Бид гурван сарын өмнө учирсан ч чи надад удаан хугацаанд таньдаг байсан хүн шиг дотно, тайван мэдрэмж өгдөг.
+Чамтай хамт байх үед цаг аяндаа зогсчих шиг болдог.
+Хамтдаа суралцаж, мөр мөрөө түшээд кино үзэж заримдаа юу ч хийхгүй зүгээр л хамт байх тэр л мөчүүд миний хувьд хамгийн үнэ цэнтэй.
+Чиний хөөрхөн төрх, энгийн атлаа дулаахан зан чинь миний сэтгэлийг өдөр бүр зөөлрүүлдэг.
+
+Шинэ ондоо би чамаас асар их зүйлийг амлахгүй. Харин баяртай үед чинь хамт инээж, ядрахад чинь хажууд чинь байж, чимээгүй дэмжиж чаддаг хүн нь байхыг л хүсэж байна.
+Бидний зам урт байгаасай, харин алхам бүр нь утгатай, дулаан байгаасай гэж хүсэж байна.
+
+Шинэ он чиний инээмсэглэлийг улам тод, мөрөөдлийг чинь улам ойртуулж, зүрхийг чинь амар тайван байлгаасай.
+Би энэ онд ч, дараагийн онуудад ч чиний хажууд байгаасай гэж хүсэж байна.
+Чамдаа хайртай шүү
+Энийг зүрхэндээ уншаарай
+Сайханбэлэг ээ!</p>
+                        <div class="signature">— B.Buyanaa ❤️</div>
+                    </div>
+
+                    <div class="letter-card">
+                        <h3>Миний хайрт Батсүхийн Буяндад ❤️</h3>
+                        <p>sain bnuu alsin alsad sugaa gunjee. ene zahiag unshij bgaa bebenede shine onii mend.
+hairn goy zahia bicij cdahgulde ghdee bicihig hicey.
+zahia bichin tuld hoyulagin hamt ungruusun 88 honogiig bi eregtsuulen bodloo.
+nereel ene jiliin hamgin goy belegin ezen boljee.
+
+bi burhan, huvi taviland itgehiig husdegguc camtaiga ucirsandaa mash ih talarhaj bn.
+ene oniig hairn saintai muutai tuulla gesenc huluu olohgu yvsan nadad hajuudmin baij ymagt urmiin uger setgeliigmin emcilj, haranhui orclond denluumin bolj baisand camdaa zurh setgelese bayrlalaa.
+
+cini ene ih halamj hairig anh medred bi ih tsojij bilee, iim ih halamj hairig umnun tudiilun emegtei hun gh ene zuiles medrej uzegu olhoor gomdooh ug helsend uuclaarai.
+ciniheen hair, dulaahan harts "medeej mini hed heden goy zuil bga te kkk"-nd ulam iheer durlaj bn.
+
+tugs emegtei gh mini oilgolt boloh 90 60 90 bsan bolovc cmasal bi tugs emegtein jisheeg harlaa "hooliign sanaad bnjuu".
+iim saihan emegteig az jargalaar duuren bailgahsan.
+cinihen baharhal, uram zorig, er nuhurn boloh mini oirin zorilgin neg bolsonju.
+
+ene zahiag unshij bga ireeduin ehnerde maash ih hairtaishuu
+\chatgptiger bicuulegu boln\</p>
+                        <div class="signature">— N. Saikhanbeleg 💕</div>
+                    </div>
+                </div>
+
                 <div class="lyrics-section">
                     <h3>Lyrics: Ordinary by Alex Warren</h3>
                     <p><strong>VERSE 1</strong><br>
                     They say the holy waters watered down and this town's lost it faith<br>
                     Our colors will fade Eventually<br>
                     So if our time is running out day after day we’ll make the mundane our masterpiece</p>
-                   
+                    <!-- (lyrics remain unchanged) -->
                     <p><strong>PRE</strong><br>
                     Oh my my Oh my my<br>
                     Love I take one look at you</p>
-                   
                     <p><strong>CHORUS</strong><br>
                     Taking me out of<br>
                     Of the ordinary I want you laying me down<br>
@@ -612,7 +648,6 @@
                     me kissing the ground of your sanctuary shatter me with your touch<br>
                     Oh lord return me to dust the<br>
                     Angels up in the clouds are jealous knowing we found</p>
-                   
                     <p><strong>VERSE 2</strong><br>
                     Hopeless hallelujah<br>
                     Oh this side of heaven’s gates<br>
@@ -621,7 +656,6 @@
                     At your alter I will pray<br>
                     You’re the sculptor I’m the clay<br>
                     Oh my my</p>
-                   
                     <p><strong>CHORUS</strong><br>
                     You’re taking me out<br>
                     Of the ordinary I want you laying me down<br>
@@ -634,13 +668,11 @@
                     Oh lord return me to dust<br>
                     The Angels up in the clouds<br>
                     Are jealous knowing we found</p>
-                   
                     <p><strong>BRIDGE</strong><br>
                     Something so heavenly<br>
                     Higher than ecstasy whenever your next to me<br>
                     Oh my my world was in black and white until I saw your light)<br>
                     I thought you had to die to find something so out</p>
-                   
                     <p><strong>CHORUS</strong><br>
                     Of the ordinary I want you laying me down<br>
                     Til we’re dead and buried<br>
@@ -655,7 +687,8 @@
             </div>
         </div>
     </div>
-    <!-- Pictures Gallery Page - Added as separate page, keeping old design elements -->
+
+    <!-- Pictures Page -->
     <div id="pictures-page">
         <nav class="nav">
             <button class="back-btn" onclick="goToMain()">Back to Memories</button>
@@ -692,8 +725,9 @@
             </div>
         </div>
     </div>
+
     <script>
-        // Login functionality
+        // All JavaScript remains exactly the same as your original
         function login() {
             const username = document.getElementById('username').value.trim();
             const password = document.getElementById('password').value.trim();
@@ -706,7 +740,6 @@
                 document.getElementById('password').value = '';
             }
         }
-        // Go back to login
         function goToLogin() {
             document.getElementById('main').style.display = 'none';
             document.getElementById('pictures-page').style.display = 'none';
@@ -714,25 +747,22 @@
             document.getElementById('username').value = '';
             document.getElementById('password').value = '';
         }
-        // Go back to main
         function goToMain() {
             document.getElementById('pictures-page').style.display = 'none';
             document.getElementById('main').style.display = 'block';
         }
-        // Enter key support for login
         document.addEventListener('keypress', function(e) {
             if (e.key === 'Enter') {
                 login();
             }
         });
-        // Search functionality for "our love" - go to pictures page
         document.addEventListener('DOMContentLoaded', function() {
             const mainSearch = document.getElementById('main-search');
             if (mainSearch) {
                 mainSearch.addEventListener('input', function() {
                     if (this.value.toLowerCase().includes('our love')) {
                         goToPicturesPage();
-                        this.value = ''; // Optional: clear search after showing
+                        this.value = '';
                     }
                 });
             }
@@ -740,33 +770,27 @@
         function goToPicturesPage() {
             document.getElementById('main').style.display = 'none';
             document.getElementById('pictures-page').style.display = 'block';
-            // Trigger smooth one-by-one animation
             setTimeout(() => {
                 const pics = document.querySelectorAll('#pictures-page .our-pic');
                 pics.forEach((pic, index) => {
                     setTimeout(() => {
                         pic.classList.add('fade-in');
-                    }, 200 + index * 250); // Staggered reveal for one-by-one effect
+                    }, 200 + index * 250);
                 });
-            }, 100); // Short delay for transition feel
+            }, 100);
         }
-        // Main content scripts
         const startDate = new Date('2025-10-05T00:00:00');
-       
         function calculateElapsed() {
             const now = new Date();
             const elapsed = now - startDate;
-           
             const totalDays = Math.floor(elapsed / (1000 * 60 * 60 * 24)) + 1;
             const days = totalDays;
             const remainingMs = elapsed % (1000 * 60 * 60 * 24);
             const hours = Math.floor(remainingMs / (1000 * 60 * 60));
             const minutes = Math.floor((remainingMs % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((remainingMs % (1000 * 60)) / 1000);
-           
             return { days, hours, minutes, seconds };
         }
-       
         function updateCounters() {
             const { days, hours, minutes, seconds } = calculateElapsed();
             document.getElementById('days').textContent = days;
@@ -774,10 +798,9 @@
             document.getElementById('minutes').textContent = minutes;
             document.getElementById('seconds').textContent = seconds;
         }
-       
         updateCounters();
         setInterval(updateCounters, 1000);
-        // Fireworks
+
         let fireworksActive = false;
         const surpriseBtn = document.getElementById('surprise-btn');
         surpriseBtn.addEventListener('click', () => {
@@ -789,7 +812,6 @@
             msg.textContent = 'Happy Birthday! 🎉';
             const container = document.querySelector('#main .container');
             container.insertBefore(msg, document.querySelector('#main .lyrics-section'));
-           
             setTimeout(() => {
                 startFullFireworksShow();
             }, 1000);
