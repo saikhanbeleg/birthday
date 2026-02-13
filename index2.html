@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday - Our Love Memory</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Login Page -->
+    <div id="login">
+        <nav class="nav">
+            <div class="logo">Bella</div>
+            <ul class="menu">
+                <li>Home</li>
+                <li>Upload 📸</li>
+            </ul>
+            <div class="search-sign">
+                <input type="search" placeholder="Search...">
+                <a href="#" class="sign-up">SIGN UP</a>
+            </div>
+        </nav>
+        <div class="content-area">
+            <div class="balloons">
+                <div class="balloon"></div>
+                <div class="balloon"></div>
+                <div class="balloon"></div>
+                <div class="balloon"></div>
+            </div>
+            <div class="container">
+                <h1 class="happy-birthday">Happy Birthday</h1>
+                <div class="login-form">
+                    <h2>Login to Enter</h2>
+                    <input type="text" id="username" placeholder="Username">
+                    <input type="password" id="password" placeholder="Password">
+                    <button onclick="login()">Login</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Upload Modal -->
+    <div id="upload-modal" class="upload-modal-overlay" onclick="closeUploadModal(event)">
+        <div class="upload-modal-box">
+            <button class="upload-modal-close" onclick="closeUploadModalDirect()">✕</button>
+            <div class="upload-modal-header">
+                <div class="upload-modal-icon">📸</div>
+                <h2>Add to Our Love Page</h2>
+                <p>Upload a photo to our memory gallery 💕</p>
+            </div>
+            <div class="upload-drop-zone" id="drop-zone" onclick="document.getElementById('file-input').click()">
+                <div class="upload-drop-icon">🌸</div>
+                <div class="upload-drop-text">Drop your photo here</div>
+                <div class="upload-drop-sub">or click to browse</div>
+                <input type="file" id="file-input" accept="image/*" multiple style="display:none" onchange="handleFileSelect(event)">
+            </div>
+            <div id="upload-preview-grid" class="upload-preview-grid"></div>
+            <div id="upload-status" class="upload-status"></div>
+            <button class="upload-confirm-btn" id="upload-confirm-btn" onclick="confirmUpload()" style="display:none">
+                Add to Our Gallery 💖
+            </button>
+        </div>
+    </div>
+
+    <!-- Main Page -->
+    <div id="main">
+        <nav class="nav">
+            <div class="logo">Bella</div>
+            <ul class="menu">
+                <li onclick="goToLogin()">Home</li>
+                <li onclick="openUploadModal()">Upload 📸</li>
+            </ul>
+            <div class="search-sign">
+                <input type="search" id="main-search" placeholder="Search...">
+                <a href="#" class="sign-up">SIGN UP</a>
+            </div>
+        </nav>
+        <div class="content-area">
+            <div class="balloons">
+                <div class="balloon"></div>
+                <div class="balloon"></div>
+                <div class="balloon"></div>
+                <div class="balloon"></div>
+            </div>
+            <div class="container">
+                <img src="https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Romantic Couple" class="romantic-image">
+                <div class="heart">💕</div>
+                <h1>Our Love Memory</h1>
+                <div class="milestone">Live Time Together</div>
+                <div class="live-counter">
+                    <div class="counter-unit">
+                        <span class="counter-value" id="days">0</span>
+                        <div class="counter-label">Days</div>
+                    </div>
+                    <div class="counter-unit">
+                        <span class="counter-value" id="hours">0</span>
+                        <div class="counter-label">Hours</div>
+                    </div>
+                    <div class="counter-unit">
+                        <span class="counter-value" id="minutes">0</span>
+                        <div class="counter-label">Minutes</div>
+                    </div>
+                    <div class="counter-unit">
+                        <span class="counter-value" id="seconds">0</span>
+                        <div class="counter-label">Seconds</div>
+                    </div>
+                </div>
+                <div class="start-date">Started on: October 5, 2025</div>
+
+                <div class="audio-controls">
+                    <audio controls autoplay loop muted>
+                        <source src="https://store.ceenaija.com/wp-content/uploads/music/2025/04/Alex_Warren_-_Ordinary_CeeNaija.com_.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element. Click play for our song!
+                    </audio>
+                    <p>Our song: "Ordinary" by Alex Warren (starts automatically muted—unmute for the full vibe! 🎶)</p>
+                </div>
+
+                <button id="surprise-btn">Click for a Surprise! 🎁</button>
+
+                <!-- Letters from the Heart -->
+                <div class="letters-section">
+                    <div class="letter-card">
+                        <h3>Шинэ жилийн мэнд, миний хайртаи 💌</h3>
+                        <p>Шинэ жилийн мэнд, миний хамгийн хөөрхөн хүн
+Он солигдож, шинэ жил эхэлж байхад чиний оршихуй миний энэ жилийг аль хэдийн гоё болгочихсон юм шиг санагддаг.
+Бид гурван сарын өмнө учирсан ч чи надад удаан хугацаанд таньдаг байсан хүн шиг дотно, тайван мэдрэмж өгдөг.
+Чамтай хамт байх үед цаг аяндаа зогсчих шиг болдог.
+Хамтдаа суралцаж, мөр мөрөө түшээд кино үзэж заримдаа юу ч хийхгүй зүгээр л хамт байх тэр л мөчүүд миний хувьд хамгийн үнэ цэнтэй.
+Чиний хөөрхөн төрх, энгийн атлаа дулаахан зан чинь миний сэтгэлийг өдөр бүр зөөлрүүлдэг.
+
+Шинэ ондоо би чамаас асар их зүйлийг амлахгүй. Харин баяртай үед чинь хамт инээж, ядрахад чинь хажууд чинь байж, чимээгүй дэмжиж чаддаг хүн нь байхыг л хүсэж байна.
+Бидний зам урт байгаасай, харин алхам бүр нь утгатай, дулаан байгаасай гэж хүсэж байна.
+
+Шинэ он чиний инээмсэглэлийг улам тод, мөрөөдлийг чинь улам ойртуулж, зүрхийг чинь амар тайван байлгаасай.
+Би энэ онд ч, дараагийн онуудад ч чиний хажууд байгаасай гэж хүсэж байна.
+Чамдаа хайртай шүү
+Энийг зүрхэндээ уншаарай
+Сайханбэлэг ээ!</p>
+                        <div class="signature">— B.Buyanaa ❤️</div>
+                    </div>
+
+                    <div class="letter-card">
+                        <h3>Миний хайрт Батсүхийн Буяндад ❤️</h3>
+                        <p>sain bnuu alsin alsad sugaa gunjee. ene zahiag unshij bgaa bebenede shine onii mend.
+hairn goy zahia bicij cdahgulde ghdee bicihig hicey.
+zahia bichin tuld hoyulagin hamt ungruusun 88 honogiig bi eregtsuulen bodloo.
+nereel ene jiliin hamgin goy belegin ezen boljee.
+
+bi burhan, huvi taviland itgehiig husdegguc camtaiga ucirsandaa mash ih talarhaj bn.
+ene oniig hairn saintai muutai tuulla gesenc huluu olohgu yvsan nadad hajuudmin baij ymagt urmiin uger setgeliigmin emcilj, haranhui orclond denluumin bolj baisand camdaa zurh setgelese bayrlalaa.
+
+cini ene ih halamj hairig anh medred bi ih tsojij bilee, iim ih halamj hairig umnun tudiilun emegtei hun gh ene zuiles medrej uzegu olhoor gomdooh ug helsend uuclaarai.
+ciniheen hair, dulaahan harts "medeej mini hed heden goy zuil bga te kkk"-nd ulam iheer durlaj bn.
+
+tugs emegtei gh mini oilgolt boloh 90 60 90 bsan bolovc cmasal bi tugs emegtein jisheeg harlaa "hooliign sanaad bnjuu".
+iim saihan emegteig az jargalaar duuren bailgahsan.
+cinihen baharhal, uram zorig, er nuhurn boloh mini oirin zorilgin neg bolsonju.
+
+ene zahiag unshij bga ireeduin ehnerde maash ih hairtaishuu
+\chatgptiger bicuulegu boln\</p>
+                        <div class="signature">— N. Saikhanbeleg 💕</div>
+                    </div>
+                </div>
+
+                <div class="lyrics-section">
+                    <h3>Lyrics: Ordinary by Alex Warren</h3>
+                    <p><strong>VERSE 1</strong><br>
+                    They say the holy waters watered down and this town's lost it faith<br>
+                    Our colors will fade Eventually<br>
+                    So if our time is running out day after day we'll make the mundane our masterpiece</p>
+                    <!-- (lyrics remain unchanged) -->
+                    <p><strong>PRE</strong><br>
+                    Oh my my Oh my my<br>
+                    Love I take one look at you</p>
+                    <p><strong>CHORUS</strong><br>
+                    Taking me out of<br>
+                    Of the ordinary I want you laying me down<br>
+                    Til we're dead and buried<br>
+                    On the edge of your knife<br>
+                    Staying drunk on your vine the<br>
+                    Angels up in the clouds are jealous knowing we found something so out of the ordinary you got<br>
+                    me kissing the ground of your sanctuary shatter me with your touch<br>
+                    Oh lord return me to dust the<br>
+                    Angels up in the clouds are jealous knowing we found</p>
+                    <p><strong>VERSE 2</strong><br>
+                    Hopeless hallelujah<br>
+                    Oh this side of heaven's gates<br>
+                    On my life<br>
+                    How do ya Breathe and Take my breath away<br>
+                    At your alter I will pray<br>
+                    You're the sculptor I'm the clay<br>
+                    Oh my my</p>
+                    <p><strong>CHORUS</strong><br>
+                    You're taking me out<br>
+                    Of the ordinary I want you laying me down<br>
+                    Til we're dead and buried<br>
+                    On the edge of your knife<br>
+                    Staying drunk on your vine<br>
+                    The Angels up in the clouds<br>
+                    Are jealous knowing we found something so out of the ordinary you got me kissing the ground<br>
+                    of your sanctuary shatter me with your touch<br>
+                    Oh lord return me to dust<br>
+                    The Angels up in the clouds<br>
+                    Are jealous knowing we found</p>
+                    <p><strong>BRIDGE</strong><br>
+                    Something so heavenly<br>
+                    Higher than ecstasy whenever your next to me<br>
+                    Oh my my world was in black and white until I saw your light)<br>
+                    I thought you had to die to find something so out</p>
+                    <p><strong>CHORUS</strong><br>
+                    Of the ordinary I want you laying me down<br>
+                    Til we're dead and buried<br>
+                    On the edge of your knife<br>
+                    Staying drunk on your vine<br>
+                    The Angels up in the clouds<br>
+                    Are jealous knowing we found something so out of the ordinary you got me kissing the ground<br>
+                    of your sanctuary shatter me with your touch<br>
+                    Oh lord return me to dust<br>
+                    The Angels up in the clouds Are jealous knowing we found</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pictures Page -->
+    <div id="pictures-page">
+        <nav class="nav">
+            <button class="back-btn" onclick="goToMain()">Back to Memories</button>
+            <div class="logo">Bella</div>
+            <ul class="menu">
+                <li onclick="goToLogin()">Home</li>
+                <li onclick="openUploadModal()">Upload 📸</li>
+            </ul>
+            <div class="search-sign">
+                <input type="search" placeholder="Search...">
+                <a href="#" class="sign-up">SIGN UP</a>
+            </div>
+        </nav>
+        <div class="content-area">
+            <div class="balloons">
+                <div class="balloon"></div>
+                <div class="balloon"></div>
+                <div class="balloon"></div>
+                <div class="balloon"></div>
+            </div>
+            <div class="container">
+                <h1 class="gallery-header">Our Love Pictures 💕</h1>
+                <div class="gallery" id="pictures-gallery-on-page">
+                    <img class="our-pic" src="./0b1310a2-5642-4a67-9c93-e5fdaccdc65f.jfif" alt="Our Love Picture 1">
+                    <img class="our-pic" src="./0c67fa2f-5385-49ce-a13a-a33b2f6f3755.jfif" alt="Our Love Picture 2">
+                    <img class="our-pic" src="./52f7b5b2-84af-4506-9037-3d18f3f60b04.jfif" alt="Our Love Picture 3">
+                    <img class="our-pic" src="./91b67145-d5c7-4506-a628-8c6d8eb63c40.jfif" alt="Our Love Picture 4">
+                    <img class="our-pic" src="./98459012-4b0b-477f-ae9d-df79fa486f7f.jfif" alt="Our Love Picture 5">
+                    <img class="our-pic" src="./a21f07f9-d464-443f-ba95-b0d3c2a010fb.jfif" alt="Our Love Picture 6">
+                    <img class="our-pic" src="./e30dcbde-add1-4b3e-8dc3-465913862edc.jfif" alt="Our Love Picture 7">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chat Bubble Button -->
+    <button class="chat-bubble-btn" id="chat-bubble-btn" onclick="toggleChat()" title="Open Chat">
+        💬
+        <span class="chat-notif" id="chat-notif" style="display:none"></span>
+    </button>
+
+    <!-- Chat Window -->
+    <div class="chat-window" id="chat-window">
+
+        <!-- Screen 1: Role Selection -->
+        <div id="chat-role-screen">
+            <div class="chat-header">
+                <div class="chat-header-info">
+                    <div class="chat-avatar">💕</div>
+                    <div>
+                        <div class="chat-header-name">Our Love Chat</div>
+                        <div class="chat-header-status">Who are you?</div>
+                    </div>
+                </div>
+                <button class="chat-close-btn" onclick="toggleChat()">✕</button>
+            </div>
+            <div class="role-select-body">
+                <p class="role-select-hint">Choose your role to enter the chat</p>
+                <button class="role-btn gf-btn" onclick="selectRole('GF')">
+                    <span class="role-emoji">👧</span>
+                    <span class="role-label">GF</span>
+                    <span class="role-sub">Girlfriend</span>
+                </button>
+                <button class="role-btn bf-btn" onclick="selectRole('BF')">
+                    <span class="role-emoji">👦</span>
+                    <span class="role-label">BF</span>
+                    <span class="role-sub">Boyfriend</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Screen 2: Chat Room -->
+        <div id="chat-room-screen" style="display:none; display:none; flex-direction:column; height:100%;">
+            <div class="chat-header">
+                <div class="chat-header-info">
+                    <div class="chat-avatar" id="chat-room-avatar">💕</div>
+                    <div>
+                        <div class="chat-header-name" id="chat-room-title">Our Love Chat</div>
+                        <div class="chat-header-status" id="chat-online-status">● Online</div>
+                    </div>
+                </div>
+                <div style="display:flex;gap:8px;align-items:center;">
+                    <button class="chat-switch-btn" onclick="switchRole()" title="Switch role">⇄</button>
+                    <button class="chat-close-btn" onclick="toggleChat()">✕</button>
+                </div>
+            </div>
+            <div class="chat-messages" id="chat-messages"></div>
+            <div class="chat-input-row">
+                <button class="chat-emoji-btn" onclick="toggleEmojiPicker()">😊</button>
+                <input type="text" class="chat-input" id="chat-input" placeholder="Type a message..." onkeydown="handleChatKey(event)">
+                <button class="chat-send-btn" onclick="sendMessage()">➤</button>
+            </div>
+            <div class="emoji-picker" id="emoji-picker" style="display:none">
+                <span onclick="insertEmoji('❤️')">❤️</span>
+                <span onclick="insertEmoji('💕')">💕</span>
+                <span onclick="insertEmoji('😍')">😍</span>
+                <span onclick="insertEmoji('🥰')">🥰</span>
+                <span onclick="insertEmoji('😘')">😘</span>
+                <span onclick="insertEmoji('💋')">💋</span>
+                <span onclick="insertEmoji('🌹')">🌹</span>
+                <span onclick="insertEmoji('✨')">✨</span>
+                <span onclick="insertEmoji('🎉')">🎉</span>
+                <span onclick="insertEmoji('😊')">😊</span>
+                <span onclick="insertEmoji('🤗')">🤗</span>
+                <span onclick="insertEmoji('💌')">💌</span>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
